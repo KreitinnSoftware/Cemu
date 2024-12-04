@@ -13,10 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
+      - name: "Clone Repository"
+        run: |
+          git clone --recurse-submodules https://github.com/KreitinnSoftware/Cemu
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
