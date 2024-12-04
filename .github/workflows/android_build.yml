@@ -4,9 +4,9 @@ on:
   workflow_call:
   workflow_dispatch:
   push:
-    branches: ["android"]
+    branches: ["android-port"]
   pull_request:
-    branches: ["android"]
+    branches: ["android-port"]
 
 jobs:
   build:
