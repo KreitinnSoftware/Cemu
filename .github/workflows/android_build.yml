@@ -47,10 +47,8 @@ jobs:
           cd ./src/android
           ./gradlew assemble$BUILD_TYPE
 
-       - name: Upload artifact
-         uses: actions/upload-artifact@v4
-         with:
-             name: cemu-android
-             path: |
-              ./src/android/app/build/outputs/apk/*/*.apk
-              ./src/android/app/build/outputs/apk/*/*.aab
+      - name: Upload Cemu APK
+        uses: actions/upload-artifact@v4
+        with: 
+          name: cemu-android
+          path: ./src/android/app/build/outputs/apk/*/*.apk
